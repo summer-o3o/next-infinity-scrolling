@@ -8,13 +8,15 @@ const page = async () => {
 
   return (
     <>
-      {
-        data?.data?.recruits.map(({ id = 0, image = "" }) => (
-          <Fragment key={id}>
-            <JobPostingItem image={image} />
-          </Fragment>
-        ))
-      }
+      <ul>
+        {
+          data?.data?.recruits.map(({ id = 0, image = "" }) => (
+            <Fragment key={id}>
+              <JobPostingItem image={image} />
+            </Fragment>
+          ))
+        }
+      </ul>
       <JobPosting />
     </>
   );
